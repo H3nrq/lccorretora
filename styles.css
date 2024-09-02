@@ -1,0 +1,289 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+}
+
+body h1 {
+    font-size: 3rem;
+}
+
+body h2 {
+    font-size: 2.5rem;
+}
+
+body p {
+    font-size: 1.1rem;
+}
+
+/* Estilos do header */
+header {
+    background:url('teste.png') no-repeat center center/cover;
+    color: #000000;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header .container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 30px;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+    text-align: justify;
+}
+
+header .container .text {
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: #bf7709;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #a86513;
+}
+
+/* Container padrão */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Estilos das seções */
+section {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+#planos .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#planos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    width: 100%;
+}
+
+#planos .card {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#planos .card h3 {
+    margin-top: 0.5rem;
+}
+
+#planos .card p {
+    flex-grow: 1;
+}
+
+#planos .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #bf7709;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: auto; /* Empurra o botão para o final do card */
+}
+
+#planos .btn-secondary:hover {
+    background-color: #a86513;
+}
+
+.btn-secondary {
+    background-color: #28a745;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background-color: #218838;
+}
+
+/* Estilos do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.8rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos do footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+#contato {
+    background-color: #333;
+    color: white;
+}
+
+#contato .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+}
+
+#about .container {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+}
+
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    #planos .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #planos .card {
+        width: 100%;
+    }
+    
+    form {
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+    body h1 {
+        font-size: 2.5rem;
+    }
+    
+    body h2 {
+        font-size: 2rem;
+    }
+    
+    body p {
+        font-size: 1rem;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    .btn-primary, .btn-secondary, form button {
+        padding: 0.6rem 1rem;
+    }
+    
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+    }
+    
+    #about .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #contato .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+}
